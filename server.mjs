@@ -4,6 +4,7 @@ console.log("This server is express hello world server");
 import express from 'express';
 import cors from 'cors';
 import path from path;
+const  __dirname = path.resolve();
 
 const app = express();
 app.use(cors())
@@ -49,8 +50,7 @@ app.get('/weather/:cityName', (req, res) => {
   }
 });
 
-app.use('/', express.static(path.join(__dirname, 'public')))
-
+app.use( express.static(path.join(__dirname, 'public')))
 
 const PORT = process.env.PORT || 3000;
 

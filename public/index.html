@@ -30,7 +30,7 @@
 
             let cityName = document.querySelector("#cityName").value;
 
-            axios.get(`http://localhost:3000/weather/${cityName}`)
+            axios.get(`/weather/${cityName}`)
                 .then(function (response) {
                     // handle success
                     console.log(response.data);
